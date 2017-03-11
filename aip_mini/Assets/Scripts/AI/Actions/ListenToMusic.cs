@@ -21,7 +21,9 @@ public class ListenToMusic : ActionBase
             player.GetComponent<Player>().GoToBar();
         }
 
-        int money_amount = player.GetComponent<Player>().GetMoneyAmount() - 2;
+        player.GetComponent<Player>().SetLastPartyTime(c.time);
+
+        int money_amount = player.GetComponent<Player>().GetMoneyAmount() - 3;
 
         player.GetComponent<Player>().SetMoneyAmount(money_amount);
     }

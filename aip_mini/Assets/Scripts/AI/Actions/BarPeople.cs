@@ -14,8 +14,6 @@ public class BarPeople : ActionBase
         var player = c.self;
         System.Random rnd = new System.Random();
 
-        
-
         if (c.time % 5 == 0)
         {
             int number_of_people = rnd.Next(0, 6);
@@ -23,8 +21,5 @@ public class BarPeople : ActionBase
             player.GetComponent<Player>().SetPeopleAtBar(c.people_at_bar.ToString());
             //Debug.Log("Changed number of people to " + c.people_at_bar + " at time " + c.time);
         }
-
-
-        
     }
 }

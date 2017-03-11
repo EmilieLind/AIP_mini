@@ -9,6 +9,7 @@ public class Player : MonoBehaviour, IContextProvider
 {
     private int last_meal;
     private int last_drink_time;
+    private int last_party_time;
     private int money_amount = 5;
 
     private bool amGoingToCafe = false;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour, IContextProvider
     public Text thirst_text;
     public Text money_amount_text;
     public Text people_at_bar_text;
+    public Text party_urge_text;
 
     private IAIContext _context;
 
@@ -148,6 +150,21 @@ public class Player : MonoBehaviour, IContextProvider
     public void SetLastMeal(int i)
     {
         last_meal = i;
+    }
+
+    public int GetLastPartyTime()
+    {
+        return last_party_time;
+    }
+
+    public void SetLastPartyTime(int i)
+    {
+        last_party_time = i;
+    }
+
+    public void SetPartyUrge(string i)
+    {
+        party_urge_text.text = "Urge to party: " + i;
     }
 
     public void SetPeopleAtBar(string s)
